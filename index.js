@@ -184,21 +184,29 @@ const textSample02 = `Ambitious work on the language continued for several years
 From 2016 to 2019, a new version of the ECMAScript standard was published each year, but the scope of changes was much smaller than the 5th or 6th editions. Thus JavaScript can now be considered a mature language that has largely settled down.`;
 
 
-//prepare text
+/* ================================= First TEXT */
+
+
 let input = textSample;
-let shorterText = input.substring(0, 127);
+let shorterText = input.substring(0, 127); //shorten text to 128 character
 // console.log(`test short text: ${shorterText}`);
+
+// 127 characters + delete white space if available
 let textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
 // console.log(`test textWithoutWhiteSpace: ${textWithoutWhiteSpace}`);
 
-/* ================================= First TEXT */
-console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
 
-//prepare text
-input = textSample02;
-shorterText = input.substring(0, 127);
-// console.log(`test short text: ${shorterText}`);
-textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
-// console.log(`test textWithoutWhiteSpace: ${textWithoutWhiteSpace}`);
-/* ================================= Second TEXT */
 console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
+//output: In November 1996, Netscape submitted JavaScript to ECMA International, as the starting point for a standard specification that... Textlength: 872 Hidden: 744 
+
+/* ================================= Second TEXT */
+
+input = textSample02;
+shorterText = input.substring(0, 127); //shorten text to 128 character
+// console.log(`test short text: ${shorterText}`);
+
+// 127 characters + delete white space if available
+textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
+
+console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
+//output: Ambitious work on the language continued for several years, culminating in an extensive collection of additions and refinements... Textlength: 440 Hidden: 312
