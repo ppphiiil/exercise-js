@@ -1,14 +1,15 @@
-/* ================================= Variable and Output */
+/* ================================= Exercise 1 */
 const text = `this is an exercise in console logging`;
 
 console.log(text);
 console.log(`${text}`);
 
-/* ================================= Variable + Variable */
+//Variable + Variable
 let firstName = "philipp";
 let lastName = "moser";
 
 console.log(`${firstName} ${lastName}`);
+
 
 /* ================================= Exercise 2 */
 // Print to the console the size of each string, and then print to the console the total sum of all strings
@@ -30,6 +31,7 @@ console.log(earlyLifeText.length);
 console.log(netscapeTimeText.length);
 
 console.log(textLength);
+
 
 /* ================================= Exercise 3 */
 // # Profile card
@@ -73,8 +75,6 @@ console.log(
     `${firstName} ${lastName} is ${age} years old. ${firstName} currently lives in London and works as a teacher.\n\n`
 );
 
-
-
 //more people and use template
 firstName = "xxx";
 lastName = "yyy";
@@ -85,6 +85,7 @@ whatThePersonDoes = "blabla";
 console.log(
     `${firstName} ${lastName} is ${age} years old. ${firstName} currently lives in London and works as a teacher.\n\n`
 );
+
 
 /* ================================= Exercise 4 */
 // # First and last character
@@ -117,12 +118,12 @@ console.log(`${text1[0].toUpperCase()}.${text1[text1.length - 1].toUpperCase()}.
 // - What?
 // - Hey there, hello
 
-
 text1 = "Cat";
 console.log(text1[text1.length - 1].repeat(3));
 
 text1 = "What?";
 console.log(text1[text1.length - 1].repeat(3));
+
 
 /* ================================= Exercise 6 */
 // # Suprise talk
@@ -142,7 +143,6 @@ text1 = "unbelivable";
 
 console.log(`${text1[0]}${text1[1]}..${text1[0]}${text1[1]}..${text1}`);
 //output un..un..unbelivable
-
 
 
 /* ================================= Exercise 7 */
