@@ -96,3 +96,7 @@ console.log(
 // - Jane Doe
 // - Technology Strategy Patterns
 // - James Bond 007
+
+let text1 = "Jane Doe";
+
+console.log(text1[0].toUpperCase() + "." + text1[text1.length - 1].toUpperCase() + ".");
