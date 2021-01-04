@@ -10,6 +10,7 @@ let lastName = "moser";
 
 console.log(`${firstName} ${lastName}`);
 
+/* ================================= Exercise 2 */
 // Print to the console the size of each string, and then print to the console the total sum of all strings
 
 const bioText =
@@ -30,6 +31,7 @@ console.log(netscapeTimeText.length);
 
 console.log(textLength);
 
+/* ================================= Exercise 3 */
 // # Profile card
 // ​
 // Let's make a profile of someone's information.
@@ -84,7 +86,7 @@ console.log(
     `${firstName} ${lastName} is ${age} years old. ${firstName} currently lives in London and works as a teacher.\n\n`
 );
 
-
+/* ================================= Exercise 4 */
 // # First and last character
 // ​
 // Take the first and last character and log them to the console, capitalized, separated by dots.
@@ -104,6 +106,7 @@ console.log(`${text1[0].toUpperCase()}.${text1[text1.length - 1].toUpperCase()}.
 //output J.E.
 
 
+/* ================================= Exercise 5 */
 // # Modify last character
 // ​
 // Using JavaScript, take the last character and repeat it 3 times, then print the result to the console.
@@ -121,7 +124,7 @@ console.log(text1[text1.length - 1].repeat(3));
 text1 = "What?";
 console.log(text1[text1.length - 1].repeat(3));
 
-
+/* ================================= Exercise 6 */
 // # Suprise talk
 // ​
 // Tranform the sample texts into surprised talking and log the transformed text to the console. For example with `incredible`, the output to the console should be: 
@@ -141,3 +144,13 @@ console.log(`${text1[0]}${text1[1]}..${text1[0]}${text1[1]}..${text1}`);
 //output un..un..unbelivable
 
 
+
+/* ================================= Exercise 7 */
+// # String transformation
+
+// In the JavaScript file, there is a sample sentence. With the use of JavaScript, make the words `html` and `css` upper case, then add 3 empty lines, and the text `The End`.
+// Log the result to the console.
+
+const sampleText = 'I love html. Also css is awesome.';
+
+console.log(`${sampleText.replace("html", "HTML").replace("css", "CSS")}\n\nThe End`);
