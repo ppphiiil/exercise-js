@@ -100,6 +100,8 @@ console.log(
 let text1 = "Jane Doe";
 
 console.log(text1[0].toUpperCase() + "." + text1[text1.length - 1].toUpperCase() + ".");
+console.log(`${text1[0].toUpperCase()}.${text1[text1.length - 1].toUpperCase()}.`);
+//output J.E.
 
 
 // # Modify last character
@@ -111,11 +113,31 @@ console.log(text1[0].toUpperCase() + "." + text1[text1.length - 1].toUpperCase()
 // - Cat
 // - What?
 // - Hey there, hello
-// Collapse
+
 
 text1 = "Cat";
 console.log(text1[text1.length - 1].repeat(3));
 
 text1 = "What?";
 console.log(text1[text1.length - 1].repeat(3));
+
+
+// # Suprise talk
+// ​
+// Tranform the sample texts into surprised talking and log the transformed text to the console. For example with `incredible`, the output to the console should be: 
+// `in..in..incredible`
+// ​
+// Sample text: 
+// ​
+// - unbelievable
+// - romatic
+// - holiday
+// - fast
+
+// `in..in..incredible`
+text1 = "unbelivable";
+
+console.log(`${text1[0]}${text1[1]}..${text1[0]}${text1[1]}..${text1}`);
+//output un..un..unbelivable
+
 
