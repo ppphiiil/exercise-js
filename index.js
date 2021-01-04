@@ -154,3 +154,51 @@ const sampleText = "I love html. Also css is awesome.";
 console.log(
     `${sampleText.replace("html", "HTML").replace("css", "CSS")}\n\nThe End`
 );
+
+
+/* ================================= Exercise 8 */
+
+// # Truncate the text
+// ​
+// In the JavaScript file, the two samples of text are quite long. Let's truncate them, and display only part of them.
+// ​
+// The maximum number of characters that should be displayed is `128`.
+// ​
+// Print to the console only the characters up to the specified max value and then add ellipsis (`...`).
+// ​
+// Make sure there is no trailing white space between the last character of the truncated text and the ellipsis.
+// ​
+// Righ after it, print to the console the size of the original string with a message explaining what this number stands for.
+// Next, print to the console how many characters were hidden, again together with a message to explain what this number stands for.
+// ​
+// How can you make the number of characters that can be dispalyed easily configurable?
+
+
+const textSample = `In November 1996, Netscape submitted JavaScript to ECMA International, as the starting point for a standard specification that all browser vendors could conform to. This led to the official release of the first ECMAScript language specification in June 1997.
+The standards process continued for a few years, with the release of ECMAScript 2 in June 1998 and ECMAScript 3 in December 1999. Work on ECMAScript 4 began in 2000.
+Meanwhile, Microsoft gained an increasingly dominant position in the browser market. By the early 2000s, Internet Explorer's market share reached 95%.[18] This meant that JScript became the de facto standard for client-side scripting on the Web.
+Microsoft initially participated in the standards process and implemented some proposals in its JScript language, but eventually it stopped collaborating on ECMA work. Thus ECMAScript 4 was mothballed.`;
+
+const textSample02 = `Ambitious work on the language continued for several years, culminating in an extensive collection of additions and refinements being formalized with the publication of ECMAScript 6 in 2015.[24]
+​
+From 2016 to 2019, a new version of the ECMAScript standard was published each year, but the scope of changes was much smaller than the 5th or 6th editions. Thus JavaScript can now be considered a mature language that has largely settled down.`;
+
+
+//prepare text
+let input = textSample;
+let shorterText = input.substring(0, 127);
+// console.log(`test short text: ${shorterText}`);
+let textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
+// console.log(`test textWithoutWhiteSpace: ${textWithoutWhiteSpace}`);
+
+/* ================================= First TEXT */
+console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
+
+//prepare text
+input = textSample02;
+shorterText = input.substring(0, 127);
+// console.log(`test short text: ${shorterText}`);
+textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
+// console.log(`test textWithoutWhiteSpace: ${textWithoutWhiteSpace}`);
+/* ================================= Second TEXT */
+console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
