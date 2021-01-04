@@ -100,3 +100,22 @@ console.log(
 let text1 = "Jane Doe";
 
 console.log(text1[0].toUpperCase() + "." + text1[text1.length - 1].toUpperCase() + ".");
+
+
+// # Modify last character
+// ​
+// Using JavaScript, take the last character and repeat it 3 times, then print the result to the console.
+// ​
+// Use these three text samples:
+// ​
+// - Cat
+// - What?
+// - Hey there, hello
+// Collapse
+
+text1 = "Cat";
+console.log(text1[text1.length - 1].repeat(3));
+
+text1 = "What?";
+console.log(text1[text1.length - 1].repeat(3));
+
