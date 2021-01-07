@@ -1,3 +1,5 @@
+
+
 /* ================================= Exercise 1 */
 const text = `this is an exercise in console logging`;
 
@@ -5,8 +7,8 @@ console.log(text);
 console.log(`${text}`);
 
 //Variable + Variable
-let firstName = "philipp";
-let lastName = "moser";
+let firstName = 'philipp';
+let lastName = 'moser';
 
 console.log(`${firstName} ${lastName}`);
 
@@ -52,11 +54,11 @@ console.log(textLength);
 // Next, print the card for another two people.
 
 //initial variables
-firstName = "philipp2";
-lastName = "moser2";
+firstName = 'philipp2';
+lastName = 'moser2';
 let age = 33;
-let wherThePersonLives = "berlin";
-let whatThePersonDoes = "bla";
+let wherThePersonLives = 'berlin';
+let whatThePersonDoes = 'bla';
 
 //print all variables
 console.log(firstName);
@@ -74,11 +76,11 @@ console.log(
 );
 
 //more people and use template
-firstName = "xxx";
-lastName = "yyy";
+firstName = 'xxx';
+lastName = 'yyy';
 age = 22;
-wherThePersonLives = "oh";
-whatThePersonDoes = "blabla";
+wherThePersonLives = 'oh';
+whatThePersonDoes = 'blabla';
 
 console.log(
     `${firstName} ${lastName} is ${age} years old. ${firstName} currently lives in London and works as a teacher.\n\n`
@@ -97,10 +99,10 @@ console.log(
 // - Technology Strategy Patterns
 // - James Bond 007
 
-let text1 = "Jane Doe";
+let text1 = 'Jane Doe';
 
 console.log(
-    text1[0].toUpperCase() + "." + text1[text1.length - 1].toUpperCase() + "."
+    text1[0].toUpperCase() + '.' + text1[text1.length - 1].toUpperCase() + '.'
 );
 console.log(
     `${text1[0].toUpperCase()}.${text1[text1.length - 1].toUpperCase()}.`
@@ -118,13 +120,14 @@ console.log(
 // - What?
 // - Hey there, hello
 
-text1 = "Cat";
+text1 = 'Cat';
 console.log(text1[text1.length - 1].repeat(3));
 
-text1 = "What?";
+text1 = 'What?';
 console.log(text1[text1.length - 1].repeat(3));
 
 /* ================================= Exercise 6 */
+console.log(`================================= Exercise 6`);
 // # Suprise talk
 // ​
 // Tranform the sample texts into surprised talking and log the transformed text to the console. For example with `incredible`, the output to the console should be:
@@ -138,25 +141,32 @@ console.log(text1[text1.length - 1].repeat(3));
 // - fast
 
 // `in..in..incredible`
-text1 = "unbelivable";
+text1 = 'unbelivable';
 
 console.log(`${text1[0]}${text1[1]}..${text1[0]}${text1[1]}..${text1}`);
 //output un..un..unbelivable
 
+/* ================================= SHORTER VERSION*/
+
+let charToRepeat = `${text1[0]}${text1[1]}..`;
+
+console.log(`${charToRepeat.repeat(5)}${text1}`);
+
 /* ================================= Exercise 7 */
+console.log(`================================= Exercise 7`);
 // # String transformation
 
 // In the JavaScript file, there is a sample sentence. With the use of JavaScript, make the words `html` and `css` upper case, then add 3 empty lines, and the text `The End`.
 // Log the result to the console.
 
-const sampleText = "I love html. Also css is awesome.";
+const sampleText = 'I love html. Also css is awesome.';
 
 console.log(
-    `${sampleText.replace("html", "HTML").replace("css", "CSS")}\n\nThe End`
+    `${sampleText.replace('html', 'HTML').replace('css', 'CSS')}\n\nThe End`
 );
 
-
 /* ================================= Exercise 8 */
+console.log(`================================= Exercise 8`);
 
 // # Truncate the text
 // ​
@@ -173,7 +183,6 @@ console.log(
 // ​
 // How can you make the number of characters that can be dispalyed easily configurable?
 
-
 const textSample = `In November 1996, Netscape submitted JavaScript to ECMA International, as the starting point for a standard specification that all browser vendors could conform to. This led to the official release of the first ECMAScript language specification in June 1997.
 The standards process continued for a few years, with the release of ECMAScript 2 in June 1998 and ECMAScript 3 in December 1999. Work on ECMAScript 4 began in 2000.
 Meanwhile, Microsoft gained an increasingly dominant position in the browser market. By the early 2000s, Internet Explorer's market share reached 95%.[18] This meant that JScript became the de facto standard for client-side scripting on the Web.
@@ -183,30 +192,50 @@ const textSample02 = `Ambitious work on the language continued for several years
 ​
 From 2016 to 2019, a new version of the ECMAScript standard was published each year, but the scope of changes was much smaller than the 5th or 6th editions. Thus JavaScript can now be considered a mature language that has largely settled down.`;
 
-
 /* ================================= First TEXT */
-
 
 let input = textSample;
 let shorterText = input.substring(0, 127); //shorten text to 128 character
-// console.log(`test short text: ${shorterText}`);
 
 // 127 characters + delete white space if available
-let textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
-// console.log(`test textWithoutWhiteSpace: ${textWithoutWhiteSpace}`);
+let textWithoutWhiteSpace =
+    input.substring(0, 126) +
+    shorterText[shorterText.length - 1].replace(' ', '');
 
-
-console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
-//output: In November 1996, Netscape submitted JavaScript to ECMA International, as the starting point for a standard specification that... Textlength: 872 Hidden: 744 
+console.log(
+    `output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128
+    } `
+);
+//output: In November 1996, Netscape submitted JavaScript to ECMA International, as the starting point for a standard specification that... Textlength: 872 Hidden: 744
 
 /* ================================= Second TEXT */
 
 input = textSample02;
 shorterText = input.substring(0, 127); //shorten text to 128 character
-// console.log(`test short text: ${shorterText}`);
 
 // 127 characters + delete white space if available
-textWithoutWhiteSpace = input.substring(0, 126) + shorterText[shorterText.length - 1].replace(" ", "");
+textWithoutWhiteSpace =
+    input.substring(0, 126) +
+    shorterText[shorterText.length - 1].replace(' ', '');
 
-console.log(`output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128} `);
+console.log(
+    `output: ${textWithoutWhiteSpace}... Textlength: ${input.length} Hidden: ${input.length - 128
+    } `
+);
+//output: Ambitious work on the language continued for several years, culminating in an extensive collection of additions and refinements... Textlength: 440 Hidden: 312
+
+// ================================= SHORTER VERSION WITH TRIM()
+console.log(space);
+
+input = textSample;
+shorterText = input.substring(0, 127); //shorten text to 128 character
+
+// 127 characters + delete white space if available
+textWithoutWhiteSpace = input.substring(0, 126).trim();
+
+console.log(space);
+console.log(
+    `output:\n${textWithoutWhiteSpace}... \n\nTextlength: ${input.length
+    } \nHidden: ${input.length - 128}${space}`
+);
 //output: Ambitious work on the language continued for several years, culminating in an extensive collection of additions and refinements... Textlength: 440 Hidden: 312
